@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login Page</h1>
+    <form>
+        <input type="email" placeholder="Enter Email id" id="email">
+        <input type="password" placeholder="Enter pswrd" id="password">
+        <input type="submit">
+    </form>
+</body>
+<script>
+    document.querySelector("form").addEventListener("submit",loginFn);
+
+    var Registeruser = JSON.parse(localStorage.getItem("Registeruser"));
+
+    function loginFn(){
+        event.preventDefault();
+
+        var email = document.querySelector("email").value;
+        var password = document.querySelector("password").value;
+
+        Registeruser.forEach(Registeruser => {
+            if(Registerdata.email == enterEmail && Registerdata.password == enterPassword){
+                alert("Login Successfuly")
+            }else{
+                alert("incorrect detail")
+            }
+        });
+    }
+
+
+
+
+
+
+</script>
+</html>
